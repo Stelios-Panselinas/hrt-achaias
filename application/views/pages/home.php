@@ -16,9 +16,7 @@
 		<hr>
 		<div class="row">
 			<?php $order = 0;
-			foreach ($posts
-
-			as $post): ?>
+			foreach ($posts	as $post): ?>
 			<?php if ($order === 0): ?>
 			<div class="col-12 col-sm-6 announcements-section-item">
 				<?php if (!empty($post['image'])): ?>
@@ -70,51 +68,20 @@
 		</div>
 	</div>
 </div>
-<div class="container departments-slider">
-		<div class="col-4 department-section-item px-2">
-				<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-				incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-				ullamco	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-				in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-				cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </span>
-			<img src="<?php echo base_url('assets/img/departments/disaster_resc.png') ?>"
+<div class="container py-5">
+	<div class="row">
+		<h3>Τα Τμήματα της ομάδας</h3>
+		<hr>
+		<div class="container departments-slider">
+			<?php foreach ($subgroups as $sub): ?>
+			<div class="col-4 department-section-item px-2">
+				<h4><?= $sub['name']?></h4>
+				<span><?= $sub['description']?></span>
+				<img src="<?php echo base_url('assets/img/departments/'.$sub['badge']) ?>"
+			</div>
 		</div>
+		<?php endforeach;?>
 	</div>
-	<div class="col-4 department-section-item">
-				<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-				incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-				ullamco	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-				in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-				cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </span>
-		<img src="<?php echo base_url('assets/img/departments/disaster_resc.png') ?>"
 	</div>
 </div>
-<div class="col-4 department-section-item">
-				<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-				incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-				ullamco	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-				in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-				cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </span>
-	<img src="<?php echo base_url('assets/img/departments/disaster_resc.png') ?>"
-</div>
-</div>
-<div class="col-4 department-section-item">
-				<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-				incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-				ullamco	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-				in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-				cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </span>
-	<img src="<?php echo base_url('assets/img/departments/disaster_resc.png') ?>"
-</div>
-</div>
-<div class="col-4 department-section-item">
-				<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-				incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-				ullamco	laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
-				in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-				cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </span>
-	<img src="<?php echo base_url('assets/img/departments/disaster_resc.png') ?>"
 
-</div>
-</div>
-</div>

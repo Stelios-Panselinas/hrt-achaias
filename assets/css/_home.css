@@ -12,6 +12,7 @@
 
 .main-slider{
 	#margin-top: 86px;
+	height: 80%;
 	.slick-prev{
 		color: #000000;
 		font-size: 35px;
@@ -26,7 +27,7 @@
 }
 
 .announcements-section {
-	margin-top: 155px;
+	margin-top: 50px;
 	margin-bottom: 50px;
 	.announcements-section-item {
 		box-shadow: -8px 11px 45px -16px;
@@ -124,7 +125,7 @@
 .eod-patras {
 	margin-top: 150px;
 	.row {
-		background-color: blueviolet;
+		background-color: #2b3de2;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
@@ -140,9 +141,12 @@
 }
 
 .departments-slider{
-	height: 45%;
+	height: 340px;
 	.slick-track{
 		width: 5000px;
+	}
+	.slick-list{
+		#height: fit-content;
 	}
 	.slick-prev{
 		border-radius: 54px;
@@ -151,14 +155,18 @@
 		top: 55%;
 		position: relative;
 		right: 5%;
+		z-index: 999;
+		background-color: cornflowerblue;
 	}
 	.slick-next{
 		border-radius: 54px;
 		display: inline-block;
 		border-style: hidden;
-		bottom: 151%;
+		bottom: 55%;
 		position: relative;
 		left: 100%;
+		z-index: 999;
+		background-color: cornflowerblue;
 	}
 	.department-section-item {
 		margin-left: 30px;
@@ -169,10 +177,11 @@
 		transition: transform 0.5s ease-in-out;
 		border-style: solid;
 		border-color: #00CC00;
+		width: 310px!important;
 		span{
 			display: none;
 		}
-		img{
+		img,h4{
 			display: flex;
 			flex-wrap: wrap;
 			align-items: center;
@@ -181,7 +190,7 @@
 		}
 	}
 	.department-section-item:hover{
-		img{
+		img,h4{
 			display: none;
 		}
 		transform: rotateY(180deg);

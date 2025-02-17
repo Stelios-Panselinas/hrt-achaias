@@ -16,6 +16,12 @@
 			slidesToScroll: 1,
 		});
     });
+
+
+	$(document).ready(function() {
+		myElements = document.getElementsByClassName("slick-arrow");
+		myElements.textContent (">");
+	});
 </script>
 </body>
 
