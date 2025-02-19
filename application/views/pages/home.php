@@ -26,7 +26,7 @@
 					<p>
 						<?= $post['small_body'] ?>
 					</p>
-					<a href="#" class="see-more-btn col-12">
+					<a href="<?= base_url('/posts/'.$post['slug'])?>" class="see-more-btn col-12">
 						<div>
 							Δείτε Περισσότερα
 						</div>
@@ -40,7 +40,7 @@
 							<img src="<?= base_url('assets/img/posts/' . $post['image']) ?>" <?php endif; ?>
 						<div class="col-12">
 							<h6> <?= $post['title'] ?></h6>
-							<a href="#" class="see-more-btn col-12">
+							<a href="<?= base_url('/posts/'.$post['slug'])?>" class="see-more-btn col-12">
 								<div>
 									Δείτε Περισσότερα
 								</div>
