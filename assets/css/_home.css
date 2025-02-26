@@ -110,7 +110,7 @@
 		width: 5000px;
 	}
 	.slick-list{
-		#height: fit-content;
+		height: 100%;
 		@media screen and (max-width: 430px){
 
 		}
@@ -165,12 +165,12 @@
 	border-radius: 54px;
 	display: inline-block;
 	border-style: hidden;
-	bottom: 55%;
+	top: -50%;
 	position: relative;
 	left: 100%;
 	z-index: 999;
 	background-color: cornflowerblue;
-	@media screen and (max-width: 430px){
+	@media  (max-width: 430px){
 		bottom: 150%;
 	}
 }
