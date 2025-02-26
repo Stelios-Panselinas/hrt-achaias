@@ -175,3 +175,23 @@
 	}
 }
 
+.footer{
+	background-color: #2b3de2;
+	display: flex !important;
+	justify-content: center;
+	align-content: center;
+	flex-wrap: wrap;
+	flex-direction: column;
+	padding: 90px;
+	span{
+		font-size: 30px;
+		color: #ffffff;
+	}
+	img{
+		width: 40px;
+	}
+	.social-media-icons{
+		justify-content: center;
+	}
+}
+
