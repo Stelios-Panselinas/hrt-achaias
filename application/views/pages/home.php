@@ -18,10 +18,10 @@
 			<?php $order = 0;
 			foreach ($posts	as $post): ?>
 			<?php if ($order === 0): ?>
-			<div class="col-12 col-sm-6 announcements-section-item">
+			<div class="announcements-section-item col-md-12 col-xl-6">
 				<?php if (!empty($post['image'])): ?>
 					<img src="<?= base_url('assets/img/posts/' . $post['image']) ?>" <?php endif; ?>
-				<div class="col-12">
+				<div>
 					<h4> <?= $post['title'] ?></h4>
 					<p>
 						<?= $post['small_body'] ?>
