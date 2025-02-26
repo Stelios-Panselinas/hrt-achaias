@@ -182,7 +182,7 @@
 	align-content: center;
 	flex-wrap: wrap;
 	flex-direction: column;
-	padding: 90px;
+	padding: 30px;
 	span{
 		font-size: 30px;
 		color: #ffffff;
@@ -190,8 +190,8 @@
 	img{
 		width: 40px;
 	}
-	.social-media-icons{
-		justify-content: center;
-	}
 }
-
+.social-media-icons{
+	justify-content: center;
+	color: #ffffff;
+}
