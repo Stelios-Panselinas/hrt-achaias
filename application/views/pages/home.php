@@ -11,6 +11,18 @@
 		</div>
 	</div>
 
+	<div class="container">
+	<?php if($this->session->flashdata('user_registered')): ?>
+		<?php echo '<p class="alert alert-success">'.$this->session->flashdata('user_registered').'</p>'; ?>
+	<?php endif; ?>
+	<?php if($this->session->flashdata('user_loggedin')): ?>
+		<?php echo '<p class="alert alert-success">'.$this->session->flashdata('user_loggedin').'</p>'; ?>
+	<?php endif; ?>
+	<?php if($this->session->flashdata('login_failed')): ?>
+		<?php echo '<p class="alert alert-danger">'.$this->session->flashdata('login_failed').'</p>'; ?>
+	<?php endif; ?>
+</div>
+
 	<div class="container announcements-section">
 		<h3>Τα τελευταία νέα μας...</h3>
 		<hr>
