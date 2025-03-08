@@ -32,6 +32,16 @@
 				<li class="nav-item">
 					<a class="nav-link" href="#">Link</a>
 				</li>
+				<?php if(!$this->session->userdata('logged_in')): ?>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo base_url(); ?>users/login">Login</a>
+				</li>
+				<?php endif; ?>
+				<?php if($this->session->userdata('logged_in')): ?>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo base_url(); ?>users/logout">Logout</a>	
+				</li>
+				<?php endif; ?>
 			</ul>
 		</div>
 	</div>
