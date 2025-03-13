@@ -87,9 +87,9 @@
 		<div class="container departments-slider">
 			<?php foreach ($subgroups as $sub): ?>
 			<div class="col-4 department-section-item px-2">
-				<h4><?= $sub['sub_name']?></h4>
-				<span><?= $sub['sub_description']?></span>
-				<img src="<?php echo base_url('assets/img/departments/'.$sub['sub_badge']) ?>"
+				<h4><?= $sub['name']?></h4>
+				<span><?= $sub['description']?></span>
+				<img src="<?php echo base_url('assets/img/departments/'.$sub['badge']) ?>"
 			</div>
 		</div>
 		<?php endforeach;?>

@@ -103,16 +103,4 @@ class Users extends CI_Controller
 
         redirect('users/login');
     }
-
-    public function profile($id)
-    {
-        
-        $data['personal_info'] = $this->user_model->get_user_data($id);
-        $data['subgroup_info'] = $this->user_model->get_subgroup_data($id);
-        $data['title'] = 'Profile';
-
-        $this->load->view('templates/header');
-        $this->load->view('users/profile', $data);
-        $this->load->view('templates/footer');
-    }
 }

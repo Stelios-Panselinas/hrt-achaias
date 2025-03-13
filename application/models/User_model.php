@@ -50,15 +50,4 @@
                 return false;
             }
         }
-
-        public function get_user_data($id){
-            $query = $this->db->get_where('user', array('user_id' => $id));
-            return $query->row_array();
-        }
-
-        public function get_subgroup_data($id){
-            $this->db->join('subgroups', 'belong_to_subgroup.subgroup_id = subgroups.subgroup_id', 'inner');
-            $query = $this->db->get_where('belong_to_subgroup', array('belong_to_subgroup.user_id' => $id));
-            return $query->result_array();
-        }
     }
