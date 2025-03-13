@@ -109,6 +109,8 @@ class Users extends CI_Controller
         
         $data['personal_info'] = $this->user_model->get_user_data($id);
         $data['subgroup_info'] = $this->user_model->get_subgroup_data($id);
+        $data['operations'] = $this->user_model->get_operations($id);
+        $data['trainings'] = $this->user_model->get_trainings($id);
         $data['title'] = 'Profile';
 
         $this->load->view('templates/header');
