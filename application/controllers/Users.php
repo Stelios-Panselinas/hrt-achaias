@@ -73,7 +73,9 @@ class Users extends CI_Controller
                 $user_data = array(
                     'user_id' => $user_id,
                     'username' => $username,
-                    'logged_in' => true
+                    'logged_in' => true,
+                    'is_department_leader' => $this->user_model->is_department_leader($user_id),
+                    'subgroup_id' => $this->user_model->is_department_leader($user_id)?$this->user_model->get_subgroup_id($user_id):false
                 );
 
                 $this->session->set_userdata($user_data);

@@ -73,4 +73,18 @@
             $query = $this->db->get_where('participate_in_training', array('participate_in_training.user_id' => $id));
             return $query->result_array();
         }
+
+        public function is_department_leader($id){
+            $query = $this->db->get_where('user', array('user_id' => $id));
+            if($query->row()->is_department_leader == 1){
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        public function get_subgroup_id($id){
+            $query = $this->db->get_where('user', array('user_id' => $id));
+            return $query->row()->is_department_leader;
+        }
     }
