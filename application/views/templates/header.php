@@ -39,6 +39,11 @@
 					<a class="nav-link" href="<?php echo base_url(); ?>users/logout">Logout</a>	
 				</li>
 				<?php endif; ?>
+				<?php if($this->session->userdata('logged_in')): ?>
+				<li class="nav-item">
+				<a class="nav-link" href="<?php echo base_url(); ?>users/profile/<?php echo $this->session->userdata('user_id'); ?>">Profile</a>	
+				</li>
+				<?php endif; ?>
 			</ul>
 		</div>
 	</div>

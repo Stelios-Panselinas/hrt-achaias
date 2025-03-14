@@ -25,7 +25,7 @@
             $result = $this->db->get('user');
 
             if($result->num_rows() == 1){
-                return $result->row(0)->id;
+                return $result->row()->user_id;
             } else {
                 return false;
             }
@@ -49,5 +49,28 @@
             } else {
                 return false;
             }
+        }
+
+        public function get_user_data($id){
+            $query = $this->db->get_where('user', array('user_id' => $id));
+            return $query->row_array();
+        }
+
+        public function get_subgroup_data($id){
+            $this->db->join('subgroups', 'belong_to_subgroup.subgroup_id = subgroups.subgroup_id', 'inner');
+            $query = $this->db->get_where('belong_to_subgroup', array('belong_to_subgroup.user_id' => $id));
+            return $query->result_array();
+        }
+
+        public function get_operations($id){
+            $this->db->join('operation', 'participate_in_operation.operation_id = operation.operation_id', 'inner');
+            $query = $this->db->get_where('participate_in_operation', array('participate_in_operation.user_id' => $id));
+            return $query->result_array();
+        }
+
+        public function get_trainings($id){
+            $this->db->join('trainings', 'participate_in_training.training_id = trainings.training_id', 'inner');
+            $query = $this->db->get_where('participate_in_training', array('participate_in_training.user_id' => $id));
+            return $query->result_array();
         }
     }
