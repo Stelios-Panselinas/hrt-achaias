@@ -84,8 +84,8 @@
         }
 
         public function get_subgroup_id($id){
-            $query = $this->db->get_where('user', array('user_id' => $id));
-            return $query->row()->is_department_leader;
+            $query = $this->db->get_where('subgroups', array('head_id' => $id));
+            return $query->row()->subgroup_id;
         }
 
         public function is_ds($id){
