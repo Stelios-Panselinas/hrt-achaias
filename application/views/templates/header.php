@@ -36,6 +36,16 @@
 					<a class="nav-link" href="<?php echo base_url(); ?>departments/get_department_members">Μέλη Τμήματος</a>
 				</li>
 				<?php endif; ?>
+				<?php if($this->session->userdata('is_ds')): ?>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo base_url(); ?>posts/create">Προσθήκη Ανακοίνωσης</a>
+				</li>
+				<?php endif; ?>
+				<?php if($this->session->userdata('is_ds')): ?>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo base_url(); ?>users/register">Προσθήκη Μέλους</a>
+				</li>
+				<?php endif; ?>
 				<?php if($this->session->userdata('logged_in')): ?>
 				<li class="nav-item">
 					<a class="nav-link" href="<?php echo base_url(); ?>users/logout">Logout</a>	
