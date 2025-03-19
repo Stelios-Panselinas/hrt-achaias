@@ -8,11 +8,14 @@
 			<?php echo $post['body']; ?>
 		</div>
 
+		<?php if($this->session->userdata('is_ds')): ?>
 		<hr>
 		<a class="btn btn-primary col-1" href="<?php echo base_url(); ?>posts/edit/<?php echo $post['slug']; ?>">Edit</a>
 		<?php echo form_open('/posts/delete/' . $post['id']); ?>
+		<br>
 		<input type="submit" value="Delete" class="btn btn-danger">
 		</form>
+		<?php endif; ?>
 		
 	</div>
 </div>

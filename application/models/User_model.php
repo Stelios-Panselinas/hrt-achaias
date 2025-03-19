@@ -87,4 +87,13 @@
             $query = $this->db->get_where('user', array('user_id' => $id));
             return $query->row()->is_department_leader;
         }
+
+        public function is_ds($id){
+            $query = $this->db->get_where('user', array('user_id' => $id));
+            if($query->row()->is_ds == 1){
+                return true;
+            } else {
+                return false;
+            }
+        }
     }

@@ -75,6 +75,7 @@ class Users extends CI_Controller
                     'username' => $username,
                     'logged_in' => true,
                     'is_department_leader' => $this->user_model->is_department_leader($user_id),
+                    'is_ds' => $this->user_model->is_ds($user_id),
                     'subgroup_id' => $this->user_model->is_department_leader($user_id)?$this->user_model->get_subgroup_id($user_id):false
                 );
 
