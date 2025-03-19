@@ -11,6 +11,11 @@
             return $query->result_array();
         }
 
+        public function get_all_members(){
+            $query = $this->db->get('user');
+            return $query->result_array();
+        }
+
         public function get_department_name($subgroup_id)
         {
             $query = $this->db->get_where('subgroups', array('subgroup_id' => $subgroup_id));

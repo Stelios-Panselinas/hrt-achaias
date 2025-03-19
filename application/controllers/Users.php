@@ -100,6 +100,9 @@ class Users extends CI_Controller
         $this->session->unset_userdata('logged_in');
         $this->session->unset_userdata('user_id');
         $this->session->unset_userdata('username');
+        $this->session->unset_userdata('is_department_leader');
+        $this->session->unset_userdata('is_ds');
+        $this->session->unset_userdata('subgroup_id');
 
         // Set message
         $this->session->set_flashdata('user_loggedout', 'You are now logged out');
