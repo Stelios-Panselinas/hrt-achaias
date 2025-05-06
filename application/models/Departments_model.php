@@ -53,4 +53,23 @@ class Departments_model extends CI_Model
             return $query->result_array();
         }
     }
+
+    public function get_subgroup_data($subgroup_id)
+    {
+        $query = $this->db->get_where('subgroups', array('subgroup_id' => $subgroup_id));
+        return $query->row_array()['sub_description'];
+    }
+
+    public function get_department_image($subgroup_id)
+    {
+        $query = $this->db->get('subgroups', array('sub_badge'));
+        return $query->row_array();
+    }
+
+
+    public function get_subgroup_by_id($subgroup_id)
+    {
+        $query = $this->db->get_where('subgroups', array('subgroup_id' => $subgroup_id));
+        return $query->row_array(); // Return the result as an associative array
+    }
 }

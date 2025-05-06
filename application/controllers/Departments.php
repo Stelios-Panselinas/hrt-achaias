@@ -8,11 +8,11 @@ class Departments extends CI_Controller
         $data['title'] = $this->departments_model->get_department_name($this->session->userdata('subgroup_id'));
         $data['department_members'] = $this->departments_model->get_all_members();
 
-        
+
         foreach ($data['department_members'] as $key => $value) {
             $data['department_members'][$key]['operations'] = $this->departments_model->get_operations($data['department_members'][$key]['user_id']);
             $data['department_members'][$key]['training'] = $this->user_model->get_trainings($data['department_members'][$key]['user_id']);
-            
+
         }
 
         $this->load->view('templates/header');
@@ -20,7 +20,8 @@ class Departments extends CI_Controller
         $this->load->view('templates/footer');
     }
 
-    public function all_members(){
+    public function all_members()
+    {
         $data['title'] = 'All Members';
         $data['all_members'] = $this->departments_model->get_all_members();
 
@@ -31,6 +32,16 @@ class Departments extends CI_Controller
 
         $this->load->view('templates/header');
         $this->load->view('departments/all_members', $data);
+        $this->load->view('templates/footer');
+    }
+
+    public function view($id)
+    {
+
+        $subgroup = $this->departments_model->get_subgroup_by_id($id);
+
+        $this->load->view('templates/header');
+        $this->load->view('departments/view', $subgroup);
         $this->load->view('templates/footer');
     }
 }
