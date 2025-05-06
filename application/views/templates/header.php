@@ -51,6 +51,11 @@
 					<a class="nav-link" href="<?php echo base_url(); ?>departments/all_members">Προβολή Μελών</a>
 				</li>
 				<?php endif; ?>
+				<?php if($this->session->userdata('is_ds')): ?>
+				<li class="nav-item">
+					<a class="nav-link" href="<?php echo base_url(); ?>operations/create">Δημιουργία Επιχείρησης</a>
+				</li>
+				<?php endif; ?>
 				<?php if($this->session->userdata('logged_in')): ?>
 				<li class="nav-item">
 					<a class="nav-link" href="<?php echo base_url(); ?>users/logout">Logout</a>	
