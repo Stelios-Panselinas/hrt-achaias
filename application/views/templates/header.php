@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/slick/slick.css')?>"/>
     <link rel="stylesheet" type="text/css" href="<?php echo base_url('assets/img/hrt_logo.png')?>slick/slick-theme.css"/>
     <link rel="stylesheet" href="<?= base_url('assets/css/_home.css') ?>">
+	<meta name="google-site-verification" content="TLAOD5McsrPl0D63W36RFG8iARrcrIrEWUA7O8VHrX4" />
 </head>
 
 <body>
