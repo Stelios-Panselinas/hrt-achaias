@@ -1,13 +1,13 @@
 <div class="container-fluid px-0">
 	<div class="main-slider">
 		<div>
-			<img src="<?php echo base_url('assets/img/main_slider_img1.jpg') ?>" alt="Avatar" style="width:100%;">
+			<img src="assets/img/main_slider_img1.jpg" alt="Avatar" style="width:100%;">
 		</div>
 		<div>
-			<img src="<?php echo base_url('assets/img/main_slider_img2.jpg') ?>" alt="Avatar" style="width:100%;">
+			<img src="assets/img/main_slider_img2.jpg" alt="Avatar" style="width:100%;">
 		</div>
 		<div>
-			<img src="<?php echo base_url('assets/img/main_slider_img3.jpg') ?>" alt="Avatar" style="width:100%;">
+			<img src="assets/img/main_slider_img3.jpg" alt="Avatar" style="width:100%;">
 		</div>
 	</div>
 
@@ -32,7 +32,7 @@
 				<?php if ($order === 0): ?>
 					<div class="announcements-section-item col-md-12 col-xl-6">
 						<?php if (!empty($post['image'])): ?>
-							<img src="<?= base_url('assets/img/posts/' . $post['image']) ?>" <?php endif; ?> <div>
+							<img src="assets/img/posts/ . <?php $post['image']?>" <?php endif; ?> <div>
 						<h4> <?= $post['title'] ?></h4>
 						<p>
 							<?= $post['small_body'] ?>
@@ -48,7 +48,7 @@
 				else: ?>
 						<div class="announcements-section-secondary-item">
 							<?php if (!empty($post['image'])): ?>
-								<img src="<?= base_url('assets/img/posts/' . $post['image']) ?>" <?php endif; ?> <div
+								<img src="assets/img/posts/ . <?php $post['image']?>" <?php endif; ?> <div
 								class="col-12">
 							<h6> <?= $post['title'] ?></h6>
 							<a href="<?= base_url('/posts/' . $post['slug']) ?>" class="see-more-btn col-12">
@@ -94,7 +94,7 @@
 								</div>
 						</a>
 					</span>
-					<img src="<?php echo base_url('assets/img/departments/' . $sub['sub_badge']) ?>" </div>
+					<img src="'assets/img/departments/' . <?php $sub['sub_badge']?>" </div>
 				</div>	
 			<?php endforeach; ?>
 			
