@@ -1,4 +1,4 @@
-<h2><?= $title; ?></h2>
+<h1><?= $title; ?></h2>
 <div class="container">
     <?php echo validation_errors(); ?>
     <?php echo form_open('posts/create'); ?>

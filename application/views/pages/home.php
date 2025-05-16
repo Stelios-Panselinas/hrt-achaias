@@ -24,7 +24,7 @@
 	</div>
 
 	<div class="container announcements-section">
-		<h3>Τα τελευταία νέα μας...</h3>
+		<h1>Τα τελευταία νέα μας...</h1>
 		<hr>
 		<div class="row">
 			<?php $order = 0;

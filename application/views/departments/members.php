@@ -1,6 +1,6 @@
 <div class="conatiner">
     <div class="row">
-        <h2> <?php echo $title; ?> </h2>
+        <h1> <?php echo $title; ?> </h2>
         <div class="col-12 d-flex justify-content-center">
 
             <table class="table table-striped table-responsive">
