@@ -2,7 +2,7 @@
 	<div class="row">
 		<div class="col-6 ">
 			<span class="d-flex align-items-center">Επικοινωνία</span>
-			<a href="tel:1234567890" class="d-flex align-items-center">Τηλέφωνο: 2610520202</a>
+			<a href="tel:2610520202" class="d-flex align-items-center">Τηλέφωνο: 2610520202</a>
 			<div class="social-media-icons">
 				<a href="https://www.facebook.com/hrtachaias/"><img src="<?php echo base_url('assets/img/icons8-facebook-50.png'); ?>"></a>
 				<a href="https://www.instagram.com/hrt_achaias/"><img src="<?php echo base_url('assets/img/icons8-instagram-48.png'); ?>"></a>
