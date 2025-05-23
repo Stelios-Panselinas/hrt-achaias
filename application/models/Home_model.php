@@ -33,7 +33,8 @@
             $data = array(
                 'title' => $this->input->post('title'),
                 'slug' => $slug,
-                'body' => $this->input->post('body')
+                'body' => $this->input->post('body'),
+				'image' => $_FILES['userfile']['name']
             );
 
             return $this->db->insert('posts', $data);
