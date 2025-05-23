@@ -203,3 +203,8 @@
 .subgroup-badge{
 	width: auto;
 }
+
+.validation-error{
+	color: #db0000;
+	font-size: 16px;
+}

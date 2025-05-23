@@ -1,12 +1,11 @@
 <div class="container col-4 d-flex justify-content-center">
     <div class="row">
         <h1><?= $title; ?></h1>
-        
-        <?php if($this->form_validation->run() === FALSE): ?> 
-            <div class="alert alert-danger" role="alert">
-                <?php echo validation_errors(); ?>
-            </div>
-        <?php endif ?>
+
+
+        <div class="validation-error" role="alert">
+            <?php echo validation_errors(); ?>
+        </div>
 
         <?php echo form_open('users/register'); ?>
         <div class="form-group">
@@ -42,7 +41,7 @@
             <select class="form-select" id="subgroupSelect1" name="subgroup1">
                 <option selected>Επιλέξτε...</option>
                 <?php foreach ($subgroups as $subgroup): ?>
-                    <option  value="<?= $subgroup['subgroup_id']; ?>"><?= $subgroup['sub_name']; ?></option>
+                    <option value="<?= $subgroup['subgroup_id']; ?>"><?= $subgroup['sub_name']; ?></option>
                     <br>
                 <?php endforeach; ?>
             </select>
@@ -71,7 +70,7 @@
             </label>
         </div>
         <div class="form-group">
-        <label class="col-12">Είναι Τμηματάρχης/ισσα;</label>
+            <label class="col-12">Είναι Τμηματάρχης/ισσα;</label>
             <input class="form-check-input" type="radio" name="is_department_leader" id="flexRadioDefault1">
             <label class="form-check-label" for="flexRadioDefault1">
                 Ναι
