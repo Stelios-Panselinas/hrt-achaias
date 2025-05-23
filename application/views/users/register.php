@@ -1,3 +1,4 @@
+<?php if($this->session->userdata('is_ds') && !is_null($this->session->userdata('logged_in'))): ?>
 <div class="container col-4 d-flex justify-content-center">
     <div class="row">
         <h1><?= $title; ?></h1>
@@ -86,3 +87,6 @@
         <?php echo form_close(); ?>
     </div>
 </div>
+<?php else: ?>
+	<?php redirect('home');?>
+<?php endif;?>

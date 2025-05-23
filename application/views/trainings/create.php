@@ -1,3 +1,4 @@
+<?php if($this->session->userdata('is_ds') && !is_null($this->session->userdata('logged_in'))): ?>
 <h1 class="d-flex justify-content-center"><?= $title; ?></h2>
 	<div class="container col-4">
 		<?php echo validation_errors(); ?>
@@ -26,3 +27,6 @@
 		<button type="submit" class="btn btn-primary">Submit</button>
 		</form>
 	</div>
+<?php else: ?>
+	<?php redirect('home');?>
+<?php endif;?>

@@ -1,3 +1,4 @@
+<?php if(!is_null($this->session->userdata('logged_in'))): ?>
 <div class="conatiner">
     <div class="row">
         <h1> <?php echo $title; ?> </h2>
@@ -96,3 +97,6 @@
             </table>
         </div>
     </div>
+<?php else: ?>
+	<?php redirect('home');?>
+<?php endif;?>

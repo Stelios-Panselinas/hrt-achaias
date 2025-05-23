@@ -33,32 +33,32 @@
 					<a class="nav-link" href="<?php echo base_url(); ?>users/login">Περιοχή Μελών</a>
 				</li>
 				<?php endif; ?>
-				<?php if($this->session->userdata('is_department_leader')): ?>
+				<?php if($this->session->userdata('is_department_leader') && $this->session->userdata('logged_in')): ?>
 				<li class="nav-item">
 					<a class="nav-link" href="<?php echo base_url(); ?>departments/get_department_members">Μέλη Τμήματος</a>
 				</li>
 				<?php endif; ?>
-				<?php if($this->session->userdata('is_ds')): ?>
+				<?php if($this->session->userdata('is_ds') && !is_null($this->session->userdata('logged_in'))): ?>
 				<li class="nav-item">
 					<a class="nav-link" href="<?php echo base_url(); ?>posts/create">Προσθήκη Ανακοίνωσης</a>
 				</li>
 				<?php endif; ?>
-				<?php if($this->session->userdata('is_ds')): ?>
+				<?php if($this->session->userdata('is_ds') && $this->session->userdata('logged_in')): ?>
 				<li class="nav-item">
 					<a class="nav-link" href="<?php echo base_url(); ?>users/register">Προσθήκη Μέλους</a>
 				</li>
 				<?php endif; ?>
-				<?php if($this->session->userdata('is_ds')): ?>
+				<?php if($this->session->userdata('is_ds') && $this->session->userdata('logged_in')): ?>
 				<li class="nav-item">
 					<a class="nav-link" href="<?php echo base_url(); ?>departments/all_members">Προβολή Μελών</a>
 				</li>
 				<?php endif; ?>
-				<?php if($this->session->userdata('is_ds')): ?>
+				<?php if($this->session->userdata('is_ds') && $this->session->userdata('logged_in')): ?>
 				<li class="nav-item">
 					<a class="nav-link" href="<?php echo base_url(); ?>operations/create">Δημιουργία Επιχείρησης</a>
 				</li>
 				<?php endif; ?>
-				<?php if($this->session->userdata('is_ds')): ?>
+				<?php if($this->session->userdata('is_ds') && $this->session->userdata('logged_in')): ?>
 					<li class="nav-item">
 						<a class="nav-link" href="<?php echo base_url(); ?>trainings/create">Δημιουργία Εκπαίδευσης</a>
 					</li>

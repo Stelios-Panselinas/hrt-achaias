@@ -1,3 +1,4 @@
+<?php if($this->session->userdata('is_ds') && !is_null($this->session->userdata('logged_in'))): ?>
 <div class="conatiner">
     <div class="row">
         <h1> <?php echo $title; ?> </h1>
@@ -98,3 +99,6 @@
             </table>
         </div>
     </div>
+<?php else: ?>
+	<?php redirect('home');?>
+<?php endif;?>

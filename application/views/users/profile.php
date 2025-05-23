@@ -1,3 +1,4 @@
+<?php if(!is_null($this->session->userdata('logged_in'))): ?>
 <h1><?= $title ?></h1>
 
 <div class="container">
@@ -58,3 +59,6 @@
         </div>
     </div>
 </div>
+<?php else: ?>
+	<?php redirect('home');?>
+<?php endif;?>
