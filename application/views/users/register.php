@@ -1,7 +1,12 @@
 <div class="container col-4 d-flex justify-content-center">
     <div class="row">
         <h1><?= $title; ?></h1>
-        <?php echo validation_errors(); ?>
+        
+        <?php if($this->form_validation->run() === FALSE): ?> 
+            <div class="alert alert-danger" role="alert">
+                <?php echo validation_errors(); ?>
+            </div>
+        <?php endif ?>
 
         <?php echo form_open('users/register'); ?>
         <div class="form-group">
@@ -33,7 +38,27 @@
             <input type="text" class="form-control" name="AM" placeholder="AM">
         </div>
         <div class="form-group">
-        <label class="col-12">Είναι στο Δ.Σ;</label>
+            <label for="subgroupSelect1">Τμήμα 1</label>
+            <select class="form-select" id="subgroupSelect1" name="subgroup1">
+                <option selected>Επιλέξτε...</option>
+                <?php foreach ($subgroups as $subgroup): ?>
+                    <option  value="<?= $subgroup['subgroup_id']; ?>"><?= $subgroup['sub_name']; ?></option>
+                    <br>
+                <?php endforeach; ?>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="subgroupSelect2">Τμήμα 2</label>
+            <select class="form-select" id="subgroupSelect2" name="subgroup2">
+                <option selected>Επιλέξτε...</option>
+                <?php foreach ($subgroups as $subgroup): ?>
+                    <option value="<?= $subgroup['subgroup_id']; ?>"><?= $subgroup['sub_name']; ?></option>
+                    <br>
+                <?php endforeach; ?>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="col-12">Είναι στο Δ.Σ;</label>
             <input class="form-check-input" type="radio" name="is_ds" id="flexRadioDefault1">
             <label class="form-check-label" for="flexRadioDefault1">
                 Ναι

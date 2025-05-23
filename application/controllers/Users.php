@@ -3,13 +3,16 @@ class Users extends CI_Controller
 {
     public function register()
     {
-        $data['title'] = 'Sign Up';
+        $data['title'] = 'Προσθήκη Μέλους';
+        $data['subgroups'] = $this->user_model->get_subgroups();
 
         $this->form_validation->set_rules('name', 'Name', 'required');
         $this->form_validation->set_rules('username', 'Username', 'required|callback_check_username_exists');
         $this->form_validation->set_rules('email', 'Email', 'required|callback_check_email_exists');
         $this->form_validation->set_rules('password', 'Password', 'required');
         $this->form_validation->set_rules('password2', 'Confirm Password', 'matches[password]');
+        $this->form_validation->set_rules('subgroup1', 'Τμήμα 1', 'required');
+        $this->form_validation->set_rules('subgroup2', 'Τμήμα 2', 'callback_check_subgroup_different');
 
         if ($this->form_validation->run() === FALSE) {
             $this->load->view('templates/header');
@@ -123,4 +126,16 @@ class Users extends CI_Controller
         $this->load->view('users/profile', $data);
         $this->load->view('templates/footer');
     }
+
+    public function check_subgroup_different($alternate_subgroup)
+{
+    $email = $this->input->post('subgroup1');
+
+    if ($alternate_subgroup === $email) {
+        $this->form_validation->set_message('check_subgroup_different', 'The %s must be different from the Τμήμα 1.');
+        return FALSE;
+    } else {
+        return TRUE;
+    }
+}
 }
