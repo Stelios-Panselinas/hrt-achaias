@@ -24,7 +24,7 @@
 	</div>
 
 	<div class="container announcements-section">
-		<h1>Τα τελευταία νέα μας...</h1>
+		<h1>Τα τελευταία νέα της ΕΟΔ Αχαΐας</h1>
 		<hr>
 		<div class="row">
 			<?php $order = 0;
@@ -65,10 +65,13 @@
 </div>
 </div>
 <div class="container-fluid eod-patras">
+	<h2>Ελληνική ομάδα διάσωσης παράρτημα Αχαΐας</h2>
+		<hr>	
 	<div class="row">
 		<div class="col-3">
 			<img src="assets/img/building.png" </div>
 		</div>
+	
 		<div class="col-4">
 			<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 				incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -80,7 +83,7 @@
 </div>
 <div class="container py-5">
 	<div class="row">
-		<h3>Τα Τμήματα της ομάδας</h3>
+		<h3>Τα Τμήματα της Ελληνικής Ομάδας Διάσωσης</h3>
 		<hr>
 		<div class="container departments-slider">
 			<?php foreach ($subgroups as $sub): ?>
