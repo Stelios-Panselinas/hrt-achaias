@@ -65,7 +65,7 @@
 </div>
 </div>
 <div class="container-fluid eod-patras">
-	<h2>Ελληνική ομάδα διάσωσης παράρτημα Αχαΐας</h2>
+	<h2>Ελληνική Ομάδα Διάσωσης Παράρτημα Αχαΐας</h2>
 		<hr>	
 	<div class="row">
 		<div class="col-3">

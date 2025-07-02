@@ -1,15 +1,18 @@
 <div class="container-fluid footer">
 	<div class="row">
-		<div class="col-6 ">
+		<div class="col-6 address">
+			<span>Διεύθυνση</span>
+			<p>Εργατικές κατοικίες Κρύα Ιτεών ΤΚ 26333 Πάτρα</p>
 			<span class="d-flex align-items-center">Επικοινωνία</span>
-			<a href="tel:2610520202" class="d-flex align-items-center">Τηλέφωνο: 2610520202</a>
+			<p>Τηλέφωνο: <a href="tel:2610520202" class="d-flex align-items-center">2610520202</a></p>
+			<p class="email">Email: <a href="mailto: achaia@hrt.org.gr"> achaia@hrt.org.gr</a></p>
 			<div class="social-media-icons">
 				<a href="https://www.facebook.com/hrtachaias/"><img src="<?php echo base_url('assets/img/icons8-facebook-50.png'); ?>"></a>
 				<a href="https://www.instagram.com/hrt_achaias/"><img src="<?php echo base_url('assets/img/icons8-instagram-48.png'); ?>"></a>
 			</div>
 		</div>
 		<div class="col-6">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d415.161873927879!2d21.722983994496904!3d38.2125648882405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135e370a37348b7b%3A0xff1115fabdea5020!2zzpXOu867zrfOvc65zrrOriDOn868zqzOtM6xIM6UzrnOsc-Dz4nPg863z4IgzqDOsc-BzqzPgc-EzrfOvM6xIM6Rz4fOsc6QzrHPgg!5e0!3m2!1sel!2sgr!4v1740583411833!5m2!1sel!2sgr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d366.572780703584!2d21.722433222244142!3d38.21251039387296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x135e370a37348b7b%3A0xff1115fabdea5020!2zzpXOu867zrfOvc65zrrOriDOn868zqzOtM6xIM6UzrnOsc-Dz4nPg863z4IgzqDOsc-BzqzPgc-EzrfOvM6xIM6Rz4fOsc6QzrHPgg!5e1!3m2!1sel!2sgr!4v1751457179905!5m2!1sel!2sgr" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 		</div>
 	</div>
 </div>
