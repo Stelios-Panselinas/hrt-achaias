@@ -72,4 +72,15 @@ class Departments_model extends CI_Model
         $query = $this->db->get_where('subgroups', array('subgroup_id' => $subgroup_id));
         return $query->row_array(); // Return the result as an associative array
     }
+
+    public function update_economical_status($user_id, $economical_ok) {
+    $this->db->where('user_id', $user_id);
+    $success = $this->db->update('user', ['economical_ok' => $economical_ok]);
+
+    if (!$success) {
+        log_message('error', 'DB error: ' . $this->db->last_query());
+    }
+
+    return $success;
+}
 }

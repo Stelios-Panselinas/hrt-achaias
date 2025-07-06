@@ -44,4 +44,27 @@ class Departments extends CI_Controller
         $this->load->view('departments/view', $subgroup);
         $this->load->view('templates/footer');
     }
+
+    public function update_economical_status() {
+    log_message('debug', 'update_economical_status called');
+
+    $user_id = $this->input->post('user_id');
+    $economical_ok = $this->input->post('economical_ok');
+
+    if ($user_id === null || $economical_ok === null) {
+        show_error('Missing parameters', 400);
+        return;
+    }
+
+    log_message('debug', "Received user_id=$user_id, economical_ok=$economical_ok");
+
+    $this->load->model('User_model');
+    $updated = $this->departments_model->update_economical_status($user_id, $economical_ok);
+
+    if ($updated) {
+        echo "Updated user #$user_id to economical_ok = $economical_ok";
+    } else {
+        show_error('Failed to update', 500);
+    }
+}
 }

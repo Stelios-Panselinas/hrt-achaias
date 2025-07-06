@@ -67,6 +67,35 @@
 		myElements.textContent (">");
 	});
 </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('.submit-btn').forEach(function(button) {
+        button.addEventListener('click', function () {
+            const userId = this.dataset.userId;
+            const switchEl = document.querySelector(`#switch${userId}`);
+            const newValue = switchEl.checked ? 1 : 0;
+
+            fetch("<?= site_url('departments/update_economical_status') ?>", {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: `user_id=${encodeURIComponent(userId)}&economical_ok=${encodeURIComponent(newValue)}`
+            })
+            .then(response => response.text().then(text => ({ status: response.status, text })))
+            .then(({ status, text }) => {
+                if (status === 200) {
+                    alert(`✅ Success: ${text}`);
+                } else {
+                    alert(`❌ Error ${status}: ${text}`);
+                }
+            })
+            .catch(error => {
+                alert(`❌ Request failed: ${error}`);
+            });
+        });
+    });
+});
+</script>
 </body>
 
 </html>
