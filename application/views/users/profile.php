@@ -43,7 +43,7 @@
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Όνομα Εκπαιδεύσης</th>
-                        <th scope="col">Ημερομηνία</th>
+                        <!-- <th scope="col">Ημερομηνία</th> -->
                     </tr>
                 </thead>
                 <tbody>
@@ -51,7 +51,7 @@
                         <tr>
                             <th scope="row"><?= $training['training_id'] ?></th>
                             <td><?= $training['name'] ?></td>
-                            <td><?= $training['date'] ?></td>
+                            <!-- <td><?= $training['date'] ?></td> -->
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

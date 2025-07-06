@@ -15,7 +15,8 @@ class Trainings extends CI_Controller
 
 		$this->form_validation->set_rules('training_name', 'Όνομα', 'required');
 		//$this->form_validation->set_rules('place', 'Τοποθεσία', 'required');
-		$this->form_validation->set_rules('date', 'Ημερομηνία', 'required');
+		// $this->form_validation->set_rules('date', 'Ημερομηνία', 'required');
+		$this->form_validation->set_rules('date', 'Ημερομηνία');
 		// $this->form_validation->set_rules('people', 'Άτομα', 'required');
 		// $this->form_validation->set_rules('subgroup', 'Τμήμα', 'required');
 
