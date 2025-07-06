@@ -44,6 +44,15 @@ class Departments extends CI_Controller
         $this->load->view('departments/view', $subgroup);
         $this->load->view('templates/footer');
     }
+    public function view_patras_department($id)
+    {
+
+        $department = $this->departments_model->get_patras_department();
+
+        $this->load->view('templates/header');
+        $this->load->view('departments/view', $department);
+        $this->load->view('templates/footer');
+    }
 
     public function update_economical_status() {
     log_message('debug', 'update_economical_status called');

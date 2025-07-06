@@ -83,4 +83,10 @@ class Departments_model extends CI_Model
 
     return $success;
 }
+
+public function get_patras_department()
+    {
+        $query = $this->db->get('patras_dep');
+        return $query->row_array();
+    }
 }
