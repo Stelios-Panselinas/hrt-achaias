@@ -2,6 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 $route['forgot-password']                = 'auth/forgot_password';
+$route['mailtest']						 = 'mailtest/index';
 $route['forgot-password/send']           = 'auth/send_reset_link';
 $route['reset-password/(:any)/(:any)']   = 'auth/reset_password/$1/$2';    // selector/token
 $route['reset-password/submit']          = 'auth/reset_password_submit';

@@ -55,7 +55,7 @@ class Auth extends CI_Controller
         $resetUrl = site_url("reset-password/{$selector}/{$token}");
 
         // Compose email
-        $this->email->from('no-reply@yourdomain.com', 'Support');
+        $this->email->from('no-reply@hrt-achaia.org.gr', 'Support');
         $this->email->to($email);
         $this->email->subject('Password reset request');
         $this->email->message($this->load->view('emails/reset_password', [
@@ -65,7 +65,11 @@ class Auth extends CI_Controller
         ], true));
 
         // Send email (don’t expose specific failures to user enumeration)
-        @$this->email->send();
+        $this->email->send();
+        if (!$this->email->send()) {
+            $dbg = $this->email->print_debugger(['headers']);
+            log_message('error', 'Password reset email failed: '.$dbg);
+        }
 
         $this->session->set_flashdata('info', $generic_msg);
         return redirect('forgot-password');

@@ -3,19 +3,19 @@
 class Mailtest extends CI_Controller {
   public function index() {
     // --- EDIT THESE 3 LINES ---
-    $to   = 'YOURTEST@GMAIL.COM';                  // where to send
-    $user = 'no-reply@yourdomain.com';             // Plesk mailbox (full address)
-    $pass = 'MAILBOX_PASSWORD';                    // mailbox password
-    $host = 'mail.yourdomain.com';                 // often 'mail.domain.tld' on Plesk
+    $to   = 'panselinastelios@GMAIL.COM';                  // where to send
+    $user = 'no-reply@hrt-achaia.org.gr';             // Plesk mailbox (full address)
+    $pass = 'o40bB25?f';                    // mailbox password
+    $host = 'mail.hrt-achaia.org.gr';                 // often 'mail.domain.tld' on Plesk
     // --------------------------
 
     $config = [
       'protocol'    => 'smtp',
       'smtp_host'   => $host,
-      'smtp_port'   => 587,        // try 587 (TLS) first; fallback to 25 without crypto
+      'smtp_port'   => 465,        // try 587 (TLS) first; fallback to 25 without crypto
       'smtp_user'   => $user,
       'smtp_pass'   => $pass,
-      'smtp_crypto' => 'tls',      // if this fails, try '' (empty) and port 25
+      'smtp_crypto' => 'ssl',      // if this fails, try '' (empty) and port 25
       'smtp_timeout'=> 10,
       'mailtype'    => 'html',
       'charset'     => 'utf-8',
