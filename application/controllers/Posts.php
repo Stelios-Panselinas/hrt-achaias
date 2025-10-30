@@ -15,8 +15,8 @@
             $this->load->view('templates/footer');
         }
 
-		public function view($slug) {
-			$data['post'] = $this->home_model->get_posts($slug);
+		public function view($id) {
+			$data['post'] = $this->home_model->get_posts_by_id($id);
 
 			/*if(empty($data['post'])){
 				show_404();
@@ -97,8 +97,8 @@
             redirect('home');
         }
 
-        public function edit($slug){
-           $data['post'] = $this->home_model->get_posts($slug);
+        public function edit($id){
+           $data['post'] = $this->home_model->get_posts_by_id($id);
 
            if(empty($data['post'])){
                show_404();  
@@ -110,5 +110,12 @@
             $this->load->view('templates/footer');
 
         }
+
+		function update($id){
+			$this->home_model->update_post($id);
+			$this->session->set_flashdata('post_updated', 'Your post has been updated.');
+
+			redirect('posts/'.$id);
+		}
     }
 ?>

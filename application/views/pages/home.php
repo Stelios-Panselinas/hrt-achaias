@@ -37,7 +37,7 @@
 						<p>
 							<?= $post['small_body'] ?>
 						</p>
-						<a href="<?= base_url('/posts/' . $post['slug']) ?>" class="see-more-btn col-12">
+						<a href="<?= base_url('/posts/' . $post['id']) ?>" class="see-more-btn col-12">
 							<div>
 								Δείτε Περισσότερα
 							</div>

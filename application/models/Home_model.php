@@ -20,6 +20,12 @@ class Home_model extends CI_Model
         return $query->row_array();
     }
 
+    public function get_posts_by_id($id)
+    {
+        $query = $this->db->get_where('posts', array('id' => $id));
+        return $query->row_array();
+    }
+
     public function get_subgroups($slug = FALSE)
     {
         if ($slug === FALSE) {
@@ -50,6 +56,20 @@ class Home_model extends CI_Model
         $this->db->where('id', $id);
         $this->db->delete('posts');
         return true;
+    }
+
+    function update_post($id)
+    {
+        $slug = url_title($this->input->post('title'));
+
+        $data = array(
+            'title' => $this->input->post('title'),
+            'slug' => $slug,
+            'body' => $this->input->post('body')
+        );
+
+        $this->db->where('id', $id);
+        return $this->db->update('posts', $data);
     }
 }
 
