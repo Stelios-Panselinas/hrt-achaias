@@ -148,6 +148,6 @@ class User_model extends CI_Model
 
     public function update_password($user_id, $new_hash)
     {
-        $this->db->where('id', $user_id)->update('user', ['password' => $new_hash]);
+        $this->db->where('user_id', $user_id)->update('user', ['password' => $new_hash]);
     }
 }

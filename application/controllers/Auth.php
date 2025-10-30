@@ -49,10 +49,10 @@ class Auth extends CI_Controller
         $expires  = new DateTime('+30 minutes');          // link valid for 30 mins
 
         // Persist reset record
-        $this->password_reset_model->create($user['id'], $selector, $tokenHash, $expires);
+        $this->password_reset_model->create($user['user_id'], $selector, $tokenHash, $expires);
 
         // Build reset URL
-        $resetUrl = site_url("reset-password/{$selector}/{$token}");
+        $resetUrl = base_url("reset-password/{$selector}/{$token}");
 
         // Compose email
         $this->email->from('no-reply@hrt-achaia.org.gr', 'Support');
@@ -118,7 +118,7 @@ class Auth extends CI_Controller
         }
 
         // All good: update password
-        $newHash = password_hash($this->input->post('password'), PASSWORD_DEFAULT);
+        $newHash = md5($this->input->post('password'));
         $this->user_model->update_password($record['user_id'], $newHash);
 
         // Invalidate reset record(s)
