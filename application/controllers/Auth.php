@@ -55,9 +55,9 @@ class Auth extends CI_Controller
         $resetUrl = "hrt-achaia.org.gr/reset-password/{$selector}/{$token}";
 
         // Compose email
-        $this->email->from('no-reply@hrt-achaia.org.gr', 'Support');
+        $this->email->from('no-reply@hrt-achaia.org.gr', 'Ελληνική Ομάδα Διάσωσης παραρτήμα Αχαΐας');
         $this->email->to($email);
-        $this->email->subject('Password reset request');
+        $this->email->subject('Αίτημα επαναφοράς κωδικού πρόσβασης');
         $this->email->message($this->load->view('emails/reset_password', [
             'reset_url' => $resetUrl,
             'user'      => $user,
