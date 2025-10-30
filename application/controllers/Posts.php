@@ -33,6 +33,7 @@
             $data['title'] = 'Create Post';
             $this->form_validation->set_rules('title', 'Title', 'required');
             $this->form_validation->set_rules('body', 'Body', 'required');
+			$this->form_validation->set_rules('userfile', 'Image', 'required');
     
             if($this->form_validation->run() === FALSE){
                 $this->load->view('templates/header');
