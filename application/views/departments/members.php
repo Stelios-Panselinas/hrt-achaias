@@ -17,7 +17,7 @@
                     <?php foreach ($department_members as $department_member): ?>
                         <tr>
                             <th scope="row"><?= $department_member['user_id'] ?></th>
-                            <td><?= $department_member['name'] ?></td>
+                            <td><?= $department_member['surname'] ?></td>
                             <td>
                                 <div class="row">
                                     <div class="col-8" id="accordion<?php echo $department_member['user_id']; ?>">
