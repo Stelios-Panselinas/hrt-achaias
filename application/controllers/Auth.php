@@ -52,7 +52,7 @@ class Auth extends CI_Controller
         $this->password_reset_model->create($user['user_id'], $selector, $tokenHash, $expires);
 
         // Build reset URL
-        $resetUrl = base_url("reset-password/{$selector}/{$token}");
+        $resetUrl = "hrt-achaia.org.gr/reset-password/{$selector}/{$token}";
 
         // Compose email
         $this->email->from('no-reply@hrt-achaia.org.gr', 'Support');
