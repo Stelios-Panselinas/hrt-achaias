@@ -138,16 +138,16 @@ class User_model extends CI_Model
 
     public function get_by_email($email)
     {
-        return $this->db->get_where('users', ['email' => $email])->row_array();
+        return $this->db->get_where('user', ['email' => $email])->row_array();
     }
 
     public function get_by_id($id)
     {
-        return $this->db->get_where('users', ['id' => $id])->row_array();
+        return $this->db->get_where('user', ['id' => $id])->row_array();
     }
 
     public function update_password($user_id, $new_hash)
     {
-        $this->db->where('id', $user_id)->update('users', ['password' => $new_hash]);
+        $this->db->where('id', $user_id)->update('user', ['password' => $new_hash]);
     }
 }
