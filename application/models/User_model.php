@@ -1,4 +1,6 @@
 <?php
+
+use SebastianBergmann\Environment\Console;
 class User_model extends CI_Model
 {
     public function register($enc_password)
@@ -132,5 +134,20 @@ class User_model extends CI_Model
         $query = $this->db->get();
 
         return $query->result_array(); // Returns the result as an array
+    }
+
+    public function get_by_email($email)
+    {
+        return $this->db->get_where('users', ['email' => $email])->row_array();
+    }
+
+    public function get_by_id($id)
+    {
+        return $this->db->get_where('users', ['id' => $id])->row_array();
+    }
+
+    public function update_password($user_id, $new_hash)
+    {
+        $this->db->where('id', $user_id)->update('users', ['password' => $new_hash]);
     }
 }
